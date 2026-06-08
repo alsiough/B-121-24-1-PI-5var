@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="JobPortal.BLL.Tests/JobPortal.BLL.Tests.csproj" Id="4f67d7cc-63f2-4b0d-b6cb-a04e2a1c102a" />
+  <Project Path="JobPortal.BLL/JobPortal.BLL.csproj" Id="1be1fe03-1954-4ef0-91d9-516fae25b20a" />
+  <Project Path="JobPortal.DAL/JobPortal.DAL.csproj" Id="06c90651-4392-4bb0-878f-dc95645ae5eb" />
+  <Project Path="JobPortal.PL/JobPortal.PL.csproj" Id="b86343af-5463-449c-a5c0-c97de0a67479" />
+</Solution>
