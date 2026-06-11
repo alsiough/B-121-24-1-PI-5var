@@ -113,7 +113,7 @@ namespace JobPortal.BLL.Tests
             var vacancy = new Vacancy { Id = 1, Requirements = "SQL, React" };
             _vacancyRepoMock.Setup(r => r.Get(1)).Returns(vacancy);
             _resumeRepoMock
-                .Setup(r => r.Find(It.IsAny<Expression<Func<Resume, bool>>>()))
+                .Setup(r => r.GetAll())
                 .Returns(new List<Resume> { new Resume { Id = 7, Title = "Full Stack", Skills = "SQL" } });
 
             var result = _service.GetResumesByVacancyRequirements(1).ToList();

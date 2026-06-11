@@ -55,7 +55,8 @@ namespace JobPortal.BLL.Services
             if (resume == null) throw new NotFoundException("Резюме не знайдено");
             var tags = resume.Skills.Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            return _database.Vacancies.Find(v => tags.Any(t => v.Requirements.IndexOf(t, StringComparison.OrdinalIgnoreCase) >= 0))
+            return _database.Vacancies.GetAll()
+                .Where(v => tags.Any(t => v.Requirements.IndexOf(t, StringComparison.OrdinalIgnoreCase) >= 0))
                 .Select(v => new VacancyDto { Id = v.Id, Title = v.Title, Requirements = v.Requirements, Salary = v.Salary }).ToList();
         }
 

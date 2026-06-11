@@ -129,7 +129,7 @@ namespace JobPortal.BLL.Tests
             var resume = new Resume { Id = 1, Skills = "C#, SQL" };
             _resumeRepoMock.Setup(r => r.Get(1)).Returns(resume);
             _vacancyRepoMock
-                .Setup(r => r.Find(It.IsAny<Expression<Func<Vacancy, bool>>>()))
+                .Setup(r => r.GetAll())
                 .Returns(new List<Vacancy> { new Vacancy { Id = 5, Title = "Backend", Requirements = "C#" } });
 
             var result = _service.GetVacanciesByResumeSkills(1).ToList();
