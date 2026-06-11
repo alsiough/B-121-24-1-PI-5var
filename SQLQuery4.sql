@@ -1,1 +1,0 @@
-﻿SELECT * FROM Users WHERE Id = 2
